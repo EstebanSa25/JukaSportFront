@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+    @apply h-full w-full flex items-center justify-center relative;
+}
+.loading-page {
+    @apply absolute h-full w-full flex flex-col gap-6 items-center justify-center left-0 top-0;
+}
+#svg {
+    @apply h-[150px] w-[150px] stroke-[black] dark:stroke-[white] stroke-[px] animate-[draw_7s_ease_infinite];
+    fill-opacity: 0;
+    stroke-dasharray: 4500;
+}
+@keyframes draw {
+    0% {
+        stroke-dashoffset: 4500;
+    }
+    95% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        fill-opacity: 1.5;
+    }
+}
+.name-container {
+    @apply h-[30px] overflow-hidden;
+}
+@keyframes name {
+    from {
+        @apply opacity-0;
+    }
+    to {
+        @apply opacity-100;
+    }
+}
+.logo-name {
+    @apply opacity-0 text-xl tracking-[12px] uppercase font-[bolder] animate-[name_7s_linear_infinite] ml-5;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}

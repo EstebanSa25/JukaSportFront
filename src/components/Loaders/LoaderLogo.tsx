@@ -1,0 +1,52 @@
+import { useTheme } from 'next-themes';
+
+export const LoaderLogo = () => {
+    const { theme } = useTheme();
+    return (
+        <div className='loading-page'>
+            <svg
+                id='svg'
+                width='77'
+                height='66'
+                viewBox='0 0 77 66'
+                fill='none'
+                xmlns='http://www.w3.org/2000/svg'
+            >
+                {theme === 'dark' ? (
+                    <>
+                        <path
+                            d='M49 47L22 0.5H0L4 8H17.5L40 47L38 50.5L25.5 29.5H16.5L38 66L49 47Z'
+                            fill='white'
+                        />
+                        <path
+                            d='M38 19C34.3333 13 27 0.9 27 0.5H49L38 19Z'
+                            fill='white'
+                        />
+                        <path
+                            d='M53 0L40 22.5L44.5 30.5L51 20H54.5L55 21.5L47 35.5L52 43L65 20L63.5 16.5L70 11.5L77 0H67.5L63 9L58.5 12H55.5L62 0H53Z'
+                            fill='white'
+                        />
+                    </>
+                ) : (
+                    <>
+                        <path
+                            d='M49 47L22 0.5H0L4 8H17.5L40 47L38 50.5L25.5 29.5H16.5L38 66L49 47Z'
+                            fill='black'
+                        />
+                        <path
+                            d='M38 19C34.3333 13 27 0.9 27 0.5H49L38 19Z'
+                            fill='black'
+                        />
+                        <path
+                            d='M53 0L40 22.5L44.5 30.5L51 20H54.5L55 21.5L47 35.5L52 43L65 20L63.5 16.5L70 11.5L77 0H67.5L63 9L58.5 12H55.5L62 0H53Z'
+                            fill='black'
+                        />
+                    </>
+                )}
+            </svg>
+            <div className='name-container'>
+                <div className='logo-name'>Juka Sport</div>
+            </div>
+        </div>
+    );
+};
