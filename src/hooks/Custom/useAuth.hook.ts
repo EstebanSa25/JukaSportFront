@@ -8,7 +8,7 @@ export const useAuth = () => {
     const navigate = useNavigate();
     const startLogin = async (form: IFormLogin) => {
         console.log({ ...form });
-        navigate(RoutesApplication.Menu);
+
         // await callEndpoint(login(form));
     };
     const startLogout = async () => {

@@ -5,16 +5,25 @@ import { esFormLogin } from '@/language';
 import { IFormLogin } from '@/models';
 import { useForm } from 'react-hook-form';
 import { FormForgotModal } from './FormForgotModal';
+import { FormTwoFactorModal } from './FormTwoFactorModal';
 
 export const FormLogin = () => {
-    const { register, handleSubmit } = useForm<IFormLogin>();
-    const { startLogin, loading } = useAuth();
+    const { register /*handleSubmit*/ } = useForm<IFormLogin>();
+    const { /*startLogin,*/ loading } = useAuth();
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
+    const {
+        isOpen: twoFactorIsOpen,
+        onOpen: twoFactorOnOpen,
+        onOpenChange: twoFactorOpenChange,
+    } = useDisclosure();
+    console.log(twoFactorIsOpen);
     return (
         <>
             <form
                 className='flex flex-col gap-4 mt-10  w-[90%] lg:w-[40%] xl:w-[25%]  justify-center'
-                onSubmit={handleSubmit(startLogin)}
+                onSubmit={
+                    /*handleSubmit(startLogin)*/ (e) => e.preventDefault()
+                }
             >
                 <Input
                     type='email'
@@ -31,6 +40,7 @@ export const FormLogin = () => {
                     {...register('password')}
                 />
                 <Button
+                    onClick={twoFactorOnOpen}
                     isLoading={loading}
                     size='lg'
                     type='submit'
@@ -49,6 +59,12 @@ export const FormLogin = () => {
             </form>
             {isOpen && (
                 <FormForgotModal onOpenChange={onOpenChange} isOpen={isOpen} />
+            )}
+            {twoFactorIsOpen && (
+                <FormTwoFactorModal
+                    onOpenChange={twoFactorOpenChange}
+                    isOpen={twoFactorIsOpen}
+                />
             )}
         </>
     );

@@ -83,3 +83,17 @@ export const esUserButton = {
 };
 
 export const esMenuTitlePage = 'Menú principal';
+
+export const esModalTwoFactor = {
+    tooltip:
+        'El codigo de autenticación es un código de 6 dígitos que se genera en su aplicación de autenticación de dos factores',
+    title: 'Código de autenticación',
+    form: {
+        input: {
+            placeholder: 'XXXXXX',
+        },
+        button: 'Verificar',
+    },
+    description:
+        'Abra su aplicación o extensión del navegador (TOTP) de autenticador de dos factores para ver su código de autenticación.',
+};
