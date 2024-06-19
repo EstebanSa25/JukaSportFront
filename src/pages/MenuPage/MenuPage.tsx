@@ -1,6 +1,6 @@
 import { Logo, ReversePageButton, UserButton } from '@/components';
-import { IconsItems } from './components';
 import { esCompany, esMenuTitlePage } from '@/language';
+import { IconsItems } from './components';
 
 const MenuPage = () => {
     return (

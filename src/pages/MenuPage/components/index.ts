@@ -1,2 +1,2 @@
-export * from './IconMenu';
+export * from '../../../components/card/IconMenu';
 export * from './IconsItems';

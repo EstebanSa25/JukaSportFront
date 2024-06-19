@@ -1,7 +1,7 @@
 import { Provider } from 'react-redux';
-import { AppRouter } from './router';
-import { store } from './redux';
 import { BrowserRouter } from 'react-router-dom';
+import { store } from './redux';
+import { AppRouter } from './router';
 
 function App() {
     return (

@@ -97,3 +97,83 @@ export const esModalTwoFactor = {
     description:
         'Abra su aplicación o extensión del navegador (TOTP) de autenticador de dos factores para ver su código de autenticación.',
 };
+
+export const esMenuInventory = {
+    Entrace: {
+        Title: 'Entrada de inventario',
+        Description: 'Registra la entrada de productos al inventario',
+    },
+    Output: {
+        Title: 'Salida de inventario',
+        Description: 'Registra la salida de productos del inventario',
+    },
+    Products: {
+        Title: 'Productos',
+        Description: 'Administra los productos del inventario',
+    },
+    Reports: {
+        Title: 'Reportes',
+        Description: 'Visualiza los reportes del inventario',
+    },
+};
+
+export const esInputFilter = {
+    placeholder: 'Buscar...',
+};
+export const esInventoryEntrancePage = {
+    Headers: {
+        Entraces: 'Entradas',
+        Date: 'Fecha',
+        Provider: 'Proveedor',
+    },
+};
+export const esEntranceList = {
+    Buton: {
+        children: 'Nuevo',
+    },
+    ButtonFilter: {
+        children: 'Buscar',
+    },
+};
+export const esInventoryEntranceRegisterPage = {
+    Title: 'Registro de entrada de inventario',
+    Header: {
+        Recive: {
+            label: 'Recibir de',
+        },
+        Operationtype: {
+            label: 'Tipo de operación',
+            value: 'Entrada de inventario',
+        },
+        Date: {
+            label: 'Fecha',
+        },
+        State: {
+            label: 'Estado',
+            labelOption: 'Estado de la entrada',
+        },
+    },
+    ButtonCreate: {
+        children: 'Registrar entrada',
+    },
+    Tabs: {
+        Operation: 'Operaciones',
+        Detail: 'Información adicional',
+    },
+    Operation: {
+        headers: {
+            Product: 'Producto',
+            Demand: 'Cantidad',
+        },
+        select: {
+            placeholder: 'Ingrese el producto',
+        },
+    },
+    Detail: {
+        label: 'Descripción',
+        placeholder: 'Ingrese la descripción',
+    },
+    ButtonAddRow: {
+        children: 'Agregar fila',
+    },
+};

@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable no-undef */
+import animations from '@midudev/tailwind-animations';
 
 // tailwind.config.js
 const { nextui } = require('@nextui-org/react');
@@ -29,6 +30,7 @@ module.exports = {
     },
     darkMode: 'class',
     plugins: [
+        animations,
         nextui({
             themes: {
                 light: {

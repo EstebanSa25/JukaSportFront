@@ -7,7 +7,20 @@ import { useTheme } from 'next-themes';
 const LoginPage = lazy(() => import('@/pages/LoginPage/LoginPage'));
 const NotFoundPage = lazy(() => import('@/pages/404/NotFoundPage'));
 const MenuPage = lazy(() => import('@/pages/MenuPage/MenuPage'));
+const InventoryMenuPage = lazy(
+    () => import('@/pages/Inventory/InventoryMenuPage/InventoryMenuPage')
+);
 
+const InventoryEntrancePage = lazy(
+    () =>
+        import('@/pages/Inventory/InventoryEntrancePage/InventoryEntrancePage')
+);
+const InventoryEntranceRegisterPage = lazy(
+    () =>
+        import(
+            '@/pages/Inventory/InventoryEntranceRegisterPage/InventoryEntranceRegisterPage'
+        )
+);
 export const AppRouter = () => {
     const { theme } = useTheme();
     const location = useLocation();
@@ -38,6 +51,23 @@ export const AppRouter = () => {
                     <Route
                         path={RoutesApplication.Menu}
                         element={<MenuPage />}
+                    />
+                    <Route
+                        path={RoutesApplication.Menu}
+                        element={<MenuPage />}
+                    />
+
+                    <Route
+                        path={RoutesApplication.MenuIcons.Inventory}
+                        element={<InventoryMenuPage />}
+                    />
+                    <Route
+                        path={RoutesApplication.MenuInventory.Entrance}
+                        element={<InventoryEntrancePage />}
+                    />
+                    <Route
+                        path={RoutesApplication.InventoryEntrance.Register}
+                        element={<InventoryEntranceRegisterPage />}
                     />
                 </Routes>
             </Suspense>

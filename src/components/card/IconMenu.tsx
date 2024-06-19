@@ -5,11 +5,14 @@ interface IconMenuProps {
     Image: React.ReactNode;
     Link: string;
     Description: string;
+    className?: string;
 }
 export const IconMenu = (figureProps: IconMenuProps) => {
     return (
-        <Link className='group p-0' to={figureProps.Link}>
-            <figure className='relative w-[8em] md:w-[20em] md:h-[10em]   bg-white dark:bg-inherit    group-hover:scale-[1.1] transition-transform duration-500 ease-in-out  flex flex-col justify-center items-center  px-2   rounded-lg shadow-slate-[ rgba(0, 0, 0, 0.25)] shadow-lg '>
+        <Link className={`group p-0 `} to={figureProps.Link}>
+            <figure
+                className={` ${figureProps.className} relative    bg-white dark:bg-inherit    group-hover:scale-[1.1] transition-transform duration-500 ease-in-out  flex flex-col justify-center items-center  px-2   rounded-lg shadow-slate-[ rgba(0, 0, 0, 0.25)] shadow-lg `}
+            >
                 {figureProps.Image}
                 <h3 className='  md:text-xl text-center hidden md:block  group-hover:block font-semibold  transition-all duration-600 ease-in-out'>
                     {figureProps.Text}
